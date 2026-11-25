@@ -121,6 +121,17 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hero-meta{margin-top:22px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;font-size:13px;color:#8697AE}
 .hero-meta span{display:inline-flex;align-items:center;gap:8px}
 .hero-meta i{width:5px;height:5px;border-radius:50%;background:#4E6483}
+.hero-grant{margin:26px auto 0;max-width:620px;display:flex;align-items:flex-start;gap:13px;text-align:left;
+  padding:15px 19px;border-radius:15px;border:1px solid rgba(253,186,116,.27);
+  background:linear-gradient(100deg,rgba(249,115,22,.15),rgba(249,115,22,.03) 74%)}
+.hero-grant .gi{flex:0 0 auto;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+  background:rgba(253,186,116,.13);border:1px solid rgba(253,186,116,.3);margin-top:1px}
+.hero-grant .gi svg{width:17px;height:17px;stroke:#FDBA74;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.hero-grant .gt{min-width:0}
+.hero-grant b{display:block;font-size:14px;font-weight:800;color:#FDBA74;letter-spacing:-.025em;line-height:1.45}
+.hero-grant b em{font-style:normal;color:#fff}
+.hero-grant p{margin-top:5px;font-size:12.5px;color:#A6B5C8;line-height:1.62}
+.hero-grant .cond{display:block;margin-top:4px;font-size:11.5px;color:#7F90A8;letter-spacing:-.01em}
 .hero-proof{position:relative;z-index:2;margin-top:clamp(40px,5vw,62px);border-top:1px solid rgba(255,255,255,.09);
   background:rgba(255,255,255,.02)}
 .hero-proof ul{display:grid;grid-template-columns:repeat(4,1fr)}
@@ -237,6 +248,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .price-amount .now b{font-size:clamp(40px,4.6vw,54px);font-weight:800;letter-spacing:-.055em;color:var(--navy);line-height:1}
 .price-amount .now span{font-size:19px;font-weight:700;color:#5A6675}
 .price-amount .save{margin-top:10px;font-size:13px;color:var(--amber-deep);font-weight:700}
+.grant-line{margin-top:14px;padding:13px 15px;border-radius:12px;background:var(--amber-soft);border:1px solid var(--amber-line)}
+.grant-line b{display:block;font-size:13.5px;font-weight:800;color:var(--amber-deep);letter-spacing:-.02em;line-height:1.45}
+.grant-line span{display:block;margin-top:4px;font-size:12px;color:#7C5C3F;line-height:1.6}
 .price-cta{margin-top:22px}
 .price-cta .btn{width:100%}
 .price-note{margin-top:12px;font-size:12.5px;color:var(--muted);line-height:1.65;text-align:center}
@@ -249,7 +263,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .include .ck{flex:0 0 auto;width:19px;height:19px;stroke:#FDBA74;stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
 .include b{color:#fff;font-weight:700}
 .include .mini{margin-top:20px;font-size:12.5px;color:#8395AC;line-height:1.7}
-.recover{margin-top:24px;display:grid;grid-template-columns:1.15fr 1fr;gap:24px;align-items:center;
+.recover{margin-top:24px;display:grid;grid-template-columns:1.15fr 1fr;gap:24px;align-items:start;
   background:#fff;border:1px solid var(--line-cool);border-radius:22px;padding:clamp(24px,3vw,32px)}
 .recover h3{font-size:19px;font-weight:800;color:var(--title);letter-spacing:-.035em;line-height:1.45;margin-top:10px}
 .recover h3 em{font-style:normal;color:var(--amber-deep)}
@@ -260,6 +274,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .rec-list div.sum{border-bottom:1px solid var(--line-cool)}
 .rec-list div.total{border-bottom:0;padding-top:14px}
 .rec-list div.total b{color:var(--amber-deep);font-size:18px}
+.rec-list div.gain{border-bottom:1px solid #F1F3F7}
+.rec-list div.gain span{color:var(--amber-deep);font-weight:700}
+.rec-list div.gain b{color:var(--amber-deep)}
+.rec-fine{margin-top:12px;font-size:11.5px;color:#A2ACBA;line-height:1.65}
 
 /* ---------- faq ---------- */
 .faq{background:var(--soft)}
@@ -296,6 +314,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .apply-box .big{margin-top:14px;font-size:46px;font-weight:800;letter-spacing:-.055em;color:var(--navy);line-height:1}
 .apply-box .big small{font-size:19px;font-weight:700;color:#5A6675;margin-left:2px}
 .apply-box .sub{margin-top:8px;font-size:13px;color:var(--muted)}
+.apply-box .grant-mini{margin-top:12px;font-size:12px;font-weight:700;color:var(--amber-deep);background:var(--amber-soft);
+  border:1px solid var(--amber-line);border-radius:9px;padding:8px 10px;line-height:1.5}
 .apply-box .btn{width:100%;margin-top:18px}
 .apply-box .btn-ghost{margin-top:10px}
 .apply-box .fine{margin-top:12px;font-size:11.5px;color:#A2ACBA;line-height:1.6}
@@ -384,6 +404,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .hero{padding-top:44px}
   .hero h1{letter-spacing:-.045em}
   .hero-meta{gap:10px 16px;font-size:12px}
+  .hero-grant{padding:13px 15px;gap:11px}
+  .hero-grant b{font-size:13px}
+  .hero-grant p{font-size:12px}
   .apply-box .big{font-size:40px}
   .c-foot{padding:14px 16px 16px}
   .c-dot{width:8px;height:8px}
@@ -436,6 +459,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="hero-price" aria-label="수강료">
         <span class="strike">추후 790,000원</span>
         <span class="now">590,000<span class="unit">원</span><span class="off">1기 한정 특가</span></span>
+      </div>
+
+      <div class="hero-grant">
+        <span class="gi" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7S10.5 2 8 2a2.5 2.5 0 0 0 0 5"/><path d="M12 7s1.5-5 4-5a2.5 2.5 0 0 1 0 5"/></svg></span>
+        <div class="gt">
+          <b>네이버 첫 광고주라면, 광고비 <em>최대 50만 원 지원</em></b>
+          <p>교육비 59만 원 + 광고비 최대 50만 원 — 합쳐 109만 원어치를 59만 원으로 시작합니다.</p>
+          <span class="cond">네이버 첫 광고주 대상 · 네이버 정책 기준 최대 50만 원 지원</span>
+        </div>
       </div>
 
       <div class="hero-cta">
@@ -552,7 +584,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
               <span class="num">06</span>
               <span class="cap-body">
                 <span class="cap-t">아파트 이름 검색 3곳 중 1곳</span>
-                <span class="cap-d">단지명으로 검색해도, 3곳 중 1곳에 내 사무소 주소가 꽂힙니다.</span>
+                <span class="cap-d">단지명으로 검색해도, 3곳 중 1곳에 내 사무소 주소가 올라갑니다.</span>
               </span>
               <span class="cap-k">3곳 중 1곳</span>
             </figcaption>
@@ -628,11 +660,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="reveal">
         <span class="eyebrow on-dark">2026 바뀐 네이버 부동산</span>
         <h2 class="h2 on-dark">아파트 이름을 검색하면,<br>이제 <em>3곳 중 1곳</em>입니다</h2>
-        <p class="lead on-dark">고객은 이제 지역이 아니라 단지명으로 검색합니다. 네이버 부동산은 그 단지에 매물을 등록한 사무소 중 <strong style="color:#F1F5F9">조건에 맞는 3곳</strong>만 먼저 보여줍니다.</p>
+        <p class="lead on-dark">고객은 이제 지역이 아니라 단지명으로 검색합니다. 단지명 검색 화면에 뜨는 중개사무소 3자리는 입찰가로 움직이는 자리 — <strong style="color:#F1F5F9">3곳 안에 들어야 고객 눈에 보입니다.</strong></p>
         <ul class="three-list">
-          <li><span class="k">1</span><div><b>3곳이 정해지는 기준을 확인합니다</b><p>등록 매물 수 · 정보 정확도 · 최근 갱신일. 감이 아니라 기준입니다.</p></div></li>
-          <li><span class="k">2</span><div><b>내 사무소를 그 기준에 맞춰 세팅합니다</b><p>상호 · 주소 · 매물 사진 · 갱신 주기를 노출 조건에 맞게 정리합니다.</p></div></li>
-          <li><span class="k">3</span><div><b>매일 자동 등록으로 그 자리를 지킵니다</b><p>한 번 올리고 끝이 아니라, 갱신이 자동으로 돌아 자리를 유지합니다.</p></div></li>
+          <li><span class="k">1</span><div><b>그 자리는 입찰가로 움직입니다</b><p>단지명 검색 화면의 중개사무소 3자리는 입찰가와 키워드 전략으로 순위가 바뀝니다.</p></div></li>
+          <li><span class="k">2</span><div><b>내 사무소 기준 입찰가·키워드 전략을 세팅합니다</b><p>단지별 경쟁 상황을 보고, 과하게 쓰지 않으면서 3곳 안에 드는 선을 잡습니다.</p></div></li>
+          <li><span class="k">3</span><div><b>매일 순위를 확인하고 관리합니다</b><p>1·2·3등 중 어디에 있는지 매일 점검하고, 밀리면 입찰가를 조정해 자리를 지킵니다.</p></div></li>
         </ul>
       </div>
       <div class="three-shot reveal" style="transition-delay:.08s">
@@ -707,6 +739,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
           <div class="save">추후 79만 원 대비 200,000원 절약</div>
         </div>
 
+        <div class="grant-line">
+          <b>+ 네이버 첫 광고주라면 광고비 최대 50만 원 지원</b>
+          <span>교육비 59만 원 + 광고비 50만 원 = 109만 원어치를 59만 원에. 네이버 첫 광고주 대상 · 네이버 정책 기준 최대 50만 원입니다.</span>
+        </div>
+
         <div class="price-cta">
           <a class="btn btn-primary" href="https://forms.gle/78bAMNSbLcg67HjS7" target="_blank" rel="noopener noreferrer">
             지금 59만 원 한정 특가 신청하기
@@ -735,15 +772,17 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div>
         <span class="eyebrow">회수 계산</span>
         <h3>매달 대행비만 아껴도,<br><em>첫 달에 수강료가 회수됩니다</em></h3>
-        <p>블로그 대행과 영상 제작을 외주에 맡기면 매달 수십만 원이 나갑니다. 같은 일을 무료 자동화로 돌리면 이후 매달 드는 외주비는 0원입니다.</p>
+        <p>블로그 대행과 영상 제작을 외주에 맡기면 매달 수십만 원이 나갑니다. 같은 일을 무료 자동화로 돌리면 이후 매달 드는 외주비는 0원입니다. 여기에 네이버 검색광고를 처음 시작하는 광고주라면 <strong>광고비 최대 50만 원 지원</strong>까지 함께 챙길 수 있습니다.</p>
       </div>
       <div class="rec-list">
         <div><span>블로그 대행 · 월 12편</span><b>300,000원</b></div>
         <div><span>영상 제작 · 월 4편</span><b>400,000원</b></div>
         <div class="sum"><span>한 달 대행 합계</span><b>700,000원</b></div>
         <div><span>교육비 (1회)</span><b>590,000원</b></div>
+        <div class="gain"><span>네이버 첫 광고주 광고비 지원 (최대)</span><b>+500,000원</b></div>
         <div class="total"><span>이후 매달 드는 외주비</span><b>0원</b></div>
       </div>
+      <p class="rec-fine" style="grid-column:1/-1">※ 광고비 지원은 네이버애즈 ‘첫 광고비 지원’ 프로그램 기준입니다. 첫 광고주가 직접 신청해야 하며, 가입 후 60일 안에 사용한 광고비를 최대 50만 원까지 광고 전용 비즈쿠폰으로 지급합니다(현금 환급 아님).</p>
     </div>
   </div>
 </section>
@@ -763,7 +802,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       </details>
       <details class="faq-item">
         <summary><span class="q">Q2</span>아파트 이름 검색 3곳 중 1곳, 정말 되나요?<span class="ic" aria-hidden="true"></span></summary>
-        <div class="faq-a">네이버 부동산은 단지명 검색 시 그 단지에 매물을 등록한 사무소 중 조건에 맞는 <strong>상위 3곳</strong>을 먼저 노출합니다. 교육에서는 그 조건을 확인하고 내 사무실 주소 · 상호 · 등록 매물을 맞춰 세팅합니다. 다만 지역과 경쟁 상황에 따라 결과는 달라질 수 있고, <strong>순위를 보장하지는 않습니다</strong>. 대신 계속 점검하고 유지하는 방법을 남겨드립니다.</div>
+        <div class="faq-a">네이버에서 단지명을 검색했을 때 나오는 중개사무소 3자리는 <strong>입찰가로 움직이는 자리</strong>입니다. 교육에서는 단지별 경쟁 상황을 보고 입찰가·키워드 전략을 세팅하고, 매일 순위를 확인해 3곳 안에 머무는 방법을 잡아 드립니다. 다만 지역과 경쟁 상황에 따라 결과는 달라질 수 있고, <strong>순위를 보장하지는 않습니다</strong>.</div>
       </details>
       <details class="faq-item">
         <summary><span class="q">Q3</span>자동화를 쓰려면 매달 프로그램 비용이 나가나요?<span class="ic" aria-hidden="true"></span></summary>
@@ -780,6 +819,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <details class="faq-item">
         <summary><span class="q">Q6</span>교육은 어떤 방식으로 진행되나요?<span class="ic" aria-hidden="true"></span></summary>
         <div class="faq-a">이론 설명은 최소로 줄이고, <strong>내 사무소 화면을 직접 세팅하는 실습</strong>으로 진행됩니다. 정확한 일정 · 준비물은 신청 후 개별 안내드리며, 노트북과 내 사무소 계정만 있으면 참여하실 수 있습니다.</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="q">Q7</span>네이버 광고비 50만 원 지원은 어떻게 받나요?<span class="ic" aria-hidden="true"></span></summary>
+        <div class="faq-a">네이버애즈의 <strong>‘첫 광고비 지원’ 프로그램</strong>입니다. 네이버 검색광고를 처음 시작하는 광고주가 직접 신청하면, 광고주센터 가입 후 60일 안에 쓴 광고비를 최대 50만 원까지 <strong>광고 전용 비즈쿠폰</strong>으로 돌려받습니다(현금 환급이 아니며, 사업자등록번호·계정 기준 1회). 대상 여부와 지급 조건은 네이버 정책 기준이며, 교육에서 광고 세팅까지 함께 잡아 드립니다.</div>
       </details>
     </div>
   </div>
@@ -808,6 +851,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         <span class="lbl">1기 한정 특가</span>
         <div class="big">590,000<small>원</small></div>
         <p class="sub">추후 790,000원 · 정원 20명</p>
+        <p class="grant-mini">네이버 첫 광고주라면 광고비 최대 50만 원 지원</p>
         <a class="btn btn-primary" href="https://forms.gle/78bAMNSbLcg67HjS7" target="_blank" rel="noopener noreferrer">
           한정 특가 신청하기
           <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
