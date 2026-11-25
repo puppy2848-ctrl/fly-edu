@@ -141,18 +141,19 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hero-grant .hg-pill i{width:5px;height:5px;border-radius:50%;background:#fff;flex:0 0 auto}
 .hero-grant .hg-cap{font-size:11.5px;font-weight:800;color:#9A4A12;background:#FFE7D0;border:1px solid #F7C79C;
   border-radius:999px;padding:5px 10px;letter-spacing:-.01em;white-space:nowrap}
-.hero-grant .hg-hl{position:relative;margin-top:13px;display:flex;flex-wrap:wrap;align-items:center;gap:2px 9px;max-width:100%;
-  font-size:clamp(30px,8.2vw,40px);line-height:1.12;font-weight:900;letter-spacing:-.055em;color:#15243B;
-  overflow-wrap:anywhere}
-.hero-grant .hg-hl .k{font-size:.58em;font-weight:800;color:#8A6B52;letter-spacing:-.03em}
-.hero-grant .hg-hl .num{display:inline-block;color:#fff;border-radius:12px;padding:1px 12px 5px;
-  background:linear-gradient(180deg,#FB8A2E,#EA580C);box-shadow:0 14px 26px -16px rgba(234,88,12,1)}
-.hero-grant .hg-hl .tail{flex:0 0 100%;color:#EA580C;font-size:.86em;margin-top:1px}
-.hero-grant .hg-calc{margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 7px;max-width:100%;
+.hero-grant .hg-lead{position:relative;margin-top:15px;font-size:clamp(15px,4.3vw,18px);line-height:1.6;font-weight:700;
+  color:#6E543F;letter-spacing:-.02em;overflow-wrap:anywhere}
+.hero-grant .hg-lead b{color:#15243B;font-weight:900}
+.hero-grant .hg-big{position:relative;margin-top:11px;display:flex;flex-wrap:wrap;align-items:center;gap:4px 11px;line-height:1;max-width:100%}
+.hero-grant .hg-big-k{font-size:clamp(17px,4.6vw,22px);font-weight:900;color:#EA580C;letter-spacing:-.045em;white-space:nowrap}
+.hero-grant .hg-big-n{display:inline-block;font-size:clamp(40px,10.6vw,58px);font-weight:900;letter-spacing:-.05em;color:#fff;
+  background:linear-gradient(180deg,#1F3554,#15243B);border-radius:15px;padding:8px 19px 13px 21px;
+  box-shadow:0 20px 34px -18px rgba(15,23,42,.95),inset 0 0 0 1px rgba(255,255,255,.1)}
+.hero-grant .hg-calc{margin-top:15px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 7px;max-width:100%;
   font-size:13px;font-weight:700;color:#7A5B41;line-height:1.5;letter-spacing:-.01em}
 .hero-grant .hg-calc .op,.hero-grant .hg-calc .eq{font-weight:800;color:#B98A5F}
 .hero-grant .hg-calc .b{color:#C2410C;font-weight:800}
-.hero-grant .hg-calc .r{display:inline-block;background:#15243B;color:#fff;font-weight:800;border-radius:7px;padding:2px 8px 3px}
+.hero-grant .hg-calc .r{display:inline-block;background:#15243B;color:#fff;font-weight:800;border-radius:7px;padding:2px 8px 3px;letter-spacing:-.03em}
 .hero-grant .hg-cond{display:block;margin-top:11px;font-size:11.5px;line-height:1.62;color:#8A6B52;letter-spacing:-.005em;overflow-wrap:anywhere}
 .hero-proof{position:relative;z-index:2;margin-top:clamp(40px,5vw,62px);border-top:1px solid rgba(255,255,255,.09);
   background:rgba(255,255,255,.02)}
@@ -279,7 +280,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   background:linear-gradient(180deg,#FB8A2E,#EA580C);border-radius:999px;padding:5px 10px;white-space:nowrap}
 .grant-line b{display:block;margin-top:9px;font-size:clamp(19px,4.4vw,23px);font-weight:900;color:#15243B;letter-spacing:-.045em;line-height:1.3;overflow-wrap:anywhere}
 .grant-line b em{font-style:normal;color:#EA580C}
-.grant-line .gl-sub{display:block;margin-top:7px;font-size:12.5px;font-weight:700;color:#7A5B41;line-height:1.6;overflow-wrap:anywhere}
+.grant-line .gl-big{margin-top:11px;display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;line-height:1;max-width:100%}
+.grant-line .gl-big-k{font-size:clamp(15px,4vw,18px);font-weight:900;color:#EA580C;letter-spacing:-.045em;white-space:nowrap}
+.grant-line .gl-big-n{display:inline-block;font-size:clamp(36px,9.6vw,46px);font-weight:900;letter-spacing:-.05em;color:#fff;
+  background:linear-gradient(180deg,#1F3554,#15243B);border-radius:12px;padding:5px 13px 8px;
+  box-shadow:0 16px 28px -18px rgba(15,23,42,.9),inset 0 0 0 1px rgba(255,255,255,.1)}
+.grant-line .gl-sub{display:block;margin-top:9px;font-size:12.5px;font-weight:700;color:#7A5B41;line-height:1.6;overflow-wrap:anywhere}
+.grant-line .gl-sub b{color:#C2410C;font-weight:900}
 .grant-line .gl-cond{display:block;margin-top:6px;font-size:11.5px;font-weight:400;color:#8A6B52;line-height:1.55;overflow-wrap:anywhere}
 .price-cta{margin-top:22px}
 .price-cta .btn{width:100%}
@@ -341,12 +348,21 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .astep b{color:#fff;font-weight:700}
 .apply-box{background:#fff;border-radius:20px;padding:26px;text-align:center;box-shadow:0 40px 80px -50px rgba(0,0,0,.7)}
 .apply-box .lbl{display:inline-block;font-size:12px;font-weight:800;color:var(--amber-deep);background:var(--amber-soft);border:1px solid var(--amber-line);border-radius:999px;padding:6px 12px}
-.apply-box .big{margin-top:14px;font-size:46px;font-weight:800;letter-spacing:-.055em;color:var(--navy);line-height:1}
-.apply-box .big small{font-size:19px;font-weight:700;color:#5A6675;margin-left:2px}
+.apply-box .big{margin-top:14px;font-size:38px;font-weight:800;letter-spacing:-.055em;color:var(--navy);line-height:1}
+.apply-box .big small{font-size:18px;font-weight:700;color:#5A6675;margin-left:2px}
 .apply-box .sub{margin-top:8px;font-size:13px;color:var(--muted)}
-.apply-box .grant-mini{margin-top:12px;font-size:13px;font-weight:800;color:#C2410C;background:#FFF4E6;
-  border:1px solid #F7C79C;border-radius:10px;padding:10px 12px;line-height:1.5;letter-spacing:-.02em;overflow-wrap:anywhere}
-.apply-box .grant-mini em{font-style:normal;font-weight:900;color:#EA580C}
+.apply-box .grant-hero{margin-top:14px;padding:14px 13px 16px;border-radius:14px;box-sizing:border-box;
+  background:linear-gradient(150deg,#FFF9F1 0%,#FFEFDC 100%);border:1px solid #F7C79C;
+  box-shadow:0 16px 30px -26px rgba(234,88,12,.95)}
+.apply-box .gh-k{display:block;font-size:12.5px;font-weight:800;color:#7A5B41;line-height:1.5;letter-spacing:-.015em;overflow-wrap:anywhere}
+.apply-box .gh-k b{color:#C2410C;font-weight:900}
+.apply-box .gh-eq{display:block;margin-top:7px;font-size:11.5px;font-weight:700;color:#A5805F;letter-spacing:-.01em;overflow-wrap:anywhere}
+.apply-box .gh-n{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:9px;flex-wrap:wrap;line-height:1}
+.apply-box .gh-nk{font-size:clamp(15px,4vw,18px);font-weight:900;color:#EA580C;letter-spacing:-.045em}
+.apply-box .gh-n b{display:inline-block;font-size:clamp(38px,10vw,46px);font-weight:900;letter-spacing:-.05em;color:#fff;
+  background:linear-gradient(180deg,#1F3554,#15243B);border-radius:12px;padding:5px 13px 8px;
+  box-shadow:0 16px 28px -18px rgba(15,23,42,.9),inset 0 0 0 1px rgba(255,255,255,.1)}
+.apply-box .grant-cond{margin-top:9px;font-size:10.5px;line-height:1.55;color:#8A6B52;overflow-wrap:anywhere}
 .apply-box .btn{width:100%;margin-top:18px}
 .apply-box .btn-ghost{margin-top:10px}
 .apply-box .fine{margin-top:12px;font-size:11.5px;color:#A2ACBA;line-height:1.6}
@@ -436,24 +452,24 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .hero h1{letter-spacing:-.045em}
   .hero-meta{gap:10px 16px;font-size:12px}
   .hero-grant{padding:22px 18px 18px;border-radius:18px;margin-top:26px;box-shadow:0 24px 46px -32px rgba(234,88,12,.9),0 0 0 6px rgba(249,115,22,.08)}
-  .hero-grant .hg-hl{gap:3px 7px}
-  .hero-grant .hg-hl .num{padding:1px 9px 4px;border-radius:9px}
+  .hero-grant .hg-big{gap:3px 8px}
+  .hero-grant .hg-big-n{padding:7px 16px 11px;border-radius:12px}
   .hero-grant .hg-calc{font-size:12.5px;gap:5px 6px}
   .hero-grant .hg-cond{font-size:11px}
-  .apply-box .big{font-size:40px}
+  .apply-box .big{font-size:34px}
   .c-foot{padding:14px 16px 16px}
   .c-dot{width:8px;height:8px}
 }
 @media (max-width:430px){
   .container{width:calc(100% - 32px)}
   .hero-grant{padding:20px 15px 17px}
-  .hero-grant .hg-hl{font-size:30px}
+  .hero-grant .hg-big-k{font-size:18px}
   .hero-grant .hg-calc{font-size:12px}
   .price-card{padding:22px 18px}
   .grant-line{padding:15px 14px 13px 16px}
 }
 @media (max-width:360px){
-  .hero-grant .hg-hl{font-size:28px}
+  .hero-grant .hg-big-n{font-size:clamp(36px,10.4vw,48px)}
   .hero-grant .hg-pill,.hero-grant .hg-cap{font-size:11px;padding:4px 9px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -509,13 +525,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="hero-grant" role="note" aria-label="네이버 첫 광고주 광고비 지원 안내">
         <div class="hg-hd">
           <span class="hg-pill"><i aria-hidden="true"></i>네이버 첫 광고주라면</span>
-          <span class="hg-cap">광고비 지원 프로그램</span>
+          <span class="hg-cap">광고비 최대 50만 원 지원</span>
         </div>
-        <p class="hg-hl">
-          <span class="k">광고비</span><span class="num">최대 50만 원</span><span class="tail">돌려받으세요</span>
+        <p class="hg-lead">교육비 <b>59만 원</b> 내고<br>광고비 <b>최대 50만 원</b> 돌려받으면</p>
+        <p class="hg-big">
+          <span class="hg-big-k">실질 체감</span><span class="hg-big-n">9만 원</span>
         </p>
         <p class="hg-calc">
-          <span>교육비 59만 원</span><span class="op" aria-hidden="true">−</span><span class="b">광고비 50만 원</span><span class="eq" aria-hidden="true">=</span><span class="r">체감 9만 원대</span>
+          <span>교육비 59만 원</span><span class="op" aria-hidden="true">−</span><span class="b">광고비 최대 50만 원</span><span class="eq" aria-hidden="true">=</span><span class="r">실질 9만 원</span>
         </p>
         <span class="hg-cond">※ 네이버 첫 광고주 대상 · 가입 후 60일 사용 광고비를 최대 50만 원 비즈쿠폰으로 지급(현금 환급 아님) · 네이버 정책 기준</span>
       </div>
@@ -792,7 +809,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         <div class="grant-line">
           <span class="gl-pill">네이버 첫 광고주라면</span>
           <b>광고비 <em>최대 50만 원</em> 돌려받으세요</b>
-          <span class="gl-sub">교육비 59만 원 + 광고비 최대 50만 원 = 109만 원어치를 59만 원에 · 체감 9만 원대</span>
+          <div class="gl-big">
+            <span class="gl-big-k">실질 체감</span><span class="gl-big-n">9만 원</span>
+          </div>
+          <span class="gl-sub">교육비 59만 원에서 광고비 최대 50만 원을 빼면, 실제로 내는 돈은 9만 원입니다.</span>
           <span class="gl-cond">※ 네이버 첫 광고주 대상 · 가입 후 60일 사용 광고비를 최대 50만 원 비즈쿠폰으로 지급(현금 환급 아님) · 네이버 정책 기준</span>
         </div>
 
@@ -903,7 +923,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         <span class="lbl">1기 한정 특가</span>
         <div class="big">590,000<small>원</small></div>
         <p class="sub">추후 790,000원 · 정원 20명</p>
-        <p class="grant-mini">네이버 첫 광고주라면 <em>광고비 최대 50만 원</em> 돌려받으세요</p>
+        <div class="grant-hero" role="note" aria-label="네이버 첫 광고주 광고비 최대 50만 원 지원 시 실질 체감 9만 원">
+          <span class="gh-k">네이버 첫 광고주라면<br>광고비 <b>최대 50만 원</b> 지원</span>
+          <span class="gh-eq">교육비 59만 원 − 광고비 50만 원</span>
+          <span class="gh-n"><span class="gh-nk">실질 체감</span><b>9만 원</b></span>
+        </div>
+        <p class="grant-cond">※ 네이버 첫 광고주 대상 · 가입 후 60일 사용 광고비를 최대 50만 원 비즈쿠폰으로 지급(현금 환급 아님) · 네이버 정책 기준</p>
         <a class="btn btn-primary" href="https://forms.gle/78bAMNSbLcg67HjS7" target="_blank" rel="noopener noreferrer">
           한정 특가 신청하기
           <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
