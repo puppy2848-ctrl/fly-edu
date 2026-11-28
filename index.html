@@ -1560,7 +1560,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         listEl.insertBefore(it, listEl.firstChild);
         emptyEl.hidden = true;
         countEl.hidden = false;
-        countEl.textContent = String(listEl.childElementCount);
+        countEl.textContent = String(listEl.querySelectorAll('.tk-item:not(.is-lock)').length);
       }
       form.reset();
       privEl.checked = true;
