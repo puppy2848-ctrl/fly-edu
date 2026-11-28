@@ -448,6 +448,59 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .float-btn{min-height:44px;padding:0 18px;font-size:14px}
 }
 
+/* ---------- talk (교육 문의 · 댓글) ---------- */
+.talk{background:linear-gradient(180deg,#fff 0%,var(--soft) 42%,var(--soft) 100%)}
+.talk [hidden]{display:none!important}
+.talk-grid{margin-top:clamp(26px,3.6vw,40px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);gap:clamp(20px,2.6vw,36px);align-items:start}
+.talk-card{background:#fff;border:1px solid var(--line-cool);border-radius:20px;padding:clamp(22px,2.8vw,32px);box-shadow:var(--shadow-md)}
+.talk-card h3{font-size:19px;font-weight:800;color:var(--title);letter-spacing:-.03em;line-height:1.4}
+.talk-card .tk-sub{margin-top:8px;font-size:13px;line-height:1.7;color:var(--sub)}
+.tk-form{margin-top:20px;display:flex;flex-direction:column;gap:14px}
+.tk-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tk-fld label{display:block;font-size:12.5px;font-weight:800;color:var(--title);letter-spacing:-.01em;margin-bottom:7px}
+.tk-fld label span{font-weight:600;color:var(--muted);margin-left:4px}
+.tk-fld input,.tk-fld textarea{width:100%;padding:13px 15px;border:1px solid var(--line-cool);border-radius:12px;background:#FCFDFE;
+  font:inherit;font-size:15px;color:var(--title);letter-spacing:-.02em;transition:border-color .16s,background .16s,box-shadow .16s}
+.tk-fld textarea{min-height:124px;resize:vertical;line-height:1.7}
+.tk-fld input::placeholder,.tk-fld textarea::placeholder{color:#AEB9C8}
+.tk-fld input:focus,.tk-fld textarea:focus{outline:none;border-color:#F5A15C;background:#fff;box-shadow:0 0 0 4px rgba(249,115,22,.13)}
+.tk-lock{display:flex;align-items:flex-start;gap:11px;padding:14px 16px;border:1px solid var(--line-cool);border-radius:14px;background:var(--soft);cursor:pointer;transition:border-color .16s,background .16s}
+.tk-lock input{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:22px;height:22px;margin:1px 0 0;border:1.5px solid #C3CDDB;border-radius:7px;background:#fff;cursor:pointer;transition:background .15s,border-color .15s}
+.tk-lock input:checked{background:var(--navy) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5 10 17.5 19 7.5'/%3E%3C/svg%3E") center/15px no-repeat;border-color:var(--navy)}
+.tk-lock-t{font-size:13.5px;font-weight:800;color:var(--title);letter-spacing:-.015em;line-height:1.5}
+.tk-lock-d{display:block;margin-top:3px;font-size:12px;font-weight:600;color:var(--sub);line-height:1.55}
+.tk-form .btn{width:100%;margin-top:2px}
+.tk-note{margin-top:4px;font-size:11.5px;line-height:1.6;color:var(--muted);text-align:center}
+.tk-msg{margin-top:14px;padding:14px 16px;border-radius:13px;font-size:13.5px;font-weight:700;line-height:1.6;display:none}
+.tk-msg.ok{display:block;background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46}
+.tk-msg.err{display:block;background:#FEF2F2;border:1px solid #FECACA;color:#991B1B}
+.tk-list-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tk-count{font-size:12px;font-weight:800;color:var(--amber-deep);background:var(--amber-soft);border:1px solid var(--amber-line);border-radius:999px;padding:3px 10px}
+.tk-list{margin-top:16px;display:flex;flex-direction:column;gap:10px;max-height:min(70vh,720px);overflow-y:auto;padding-right:4px;scrollbar-width:thin}
+.tk-list::-webkit-scrollbar{width:7px}
+.tk-list::-webkit-scrollbar-thumb{background:#D6DEE9;border-radius:999px}
+.tk-item{border:1px solid var(--line-cool);border-radius:15px;padding:16px 18px;background:#fff}
+.tk-item.is-new{border-color:var(--amber-line);background:linear-gradient(180deg,#FFFBF6,#fff);animation:tkIn .5s var(--ease) both}
+@keyframes tkIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.tk-item.is-lock{background:#F7F9FC;border-style:dashed}
+.tk-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tk-avatar{width:26px;height:26px;flex:0 0 auto;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center;letter-spacing:0}
+.tk-name{font-size:14px;font-weight:800;color:var(--title);letter-spacing:-.02em}
+.tk-date{margin-left:auto;font-size:11.5px;color:var(--muted);font-weight:600;white-space:nowrap}
+.tk-body{margin-top:9px;font-size:14.5px;line-height:1.78;color:var(--body);white-space:pre-wrap;overflow-wrap:break-word}
+.tk-body.lock{color:#6B7789;font-weight:700;font-size:13.5px}
+.tk-reply{margin-top:12px;padding:12px 14px;border-radius:12px;background:var(--amber-soft);border:1px solid var(--amber-line)}
+.tk-reply b{display:block;font-size:11.5px;font-weight:800;color:var(--amber-deep);letter-spacing:.02em}
+.tk-reply p{margin-top:5px;font-size:14px;line-height:1.75;color:#6B4A2E;white-space:pre-wrap;overflow-wrap:break-word}
+.tk-empty{margin-top:16px;padding:34px 22px;border:1px dashed #D7DEE9;border-radius:16px;text-align:center;background:#fff}
+.tk-empty b{display:block;font-size:14.5px;color:var(--title);font-weight:800;letter-spacing:-.02em}
+.tk-empty span{display:block;margin-top:7px;font-size:12.5px;color:var(--sub);line-height:1.65}
+.tk-loading{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.tk-sk{height:76px;border-radius:15px;background:linear-gradient(90deg,#F1F4F8 25%,#F8FAFC 50%,#F1F4F8 75%);background-size:200% 100%;animation:tkSk 1.3s linear infinite}
+@keyframes tkSk{to{background-position:-200% 0}}
+@media (max-width:980px){.talk-grid{grid-template-columns:1fr}.tk-list{max-height:none}}
+@media (max-width:520px){.tk-row{grid-template-columns:1fr}.talk-card{padding:20px 18px}.tk-fld input,.tk-fld textarea{font-size:15px}}
+
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.in{opacity:1;transform:none}
@@ -544,6 +597,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <a href="#compare">수강 전 · 후</a>
       <a href="#pricing">수강 안내</a>
       <a href="#faq">자주 묻는 질문</a>
+      <a href="#talk">교육 문의</a>
     </nav>
     <div class="header-cta">
       <div class="header-price">올해 마지막 모집<strong>590,000원</strong></div>
@@ -1042,6 +1096,64 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </div>
 </section>
 
+<!-- ======================= TALK (교육 문의 · 댓글) ======================= -->
+<section class="section talk" id="talk">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">교육 문의 · 댓글</span>
+      <h2 class="h2">궁금한 점은 <em>여기에 남겨 주세요</em></h2>
+      <p class="lead">회원가입이나 로그인 없이 이름(또는 닉네임)과 내용만 적으면 바로 등록됩니다. 공개로 남긴 글은 아래 목록에 그대로 보이고, <strong>비공개로 남긴 문의는 작성자와 운영자만</strong> 확인합니다.</p>
+    </div>
+
+    <div class="talk-grid">
+      <div class="talk-card reveal">
+        <h3>💬 교육 문의 · 댓글 남기기</h3>
+        <p class="tk-sub">수강료 · 일정 · 자동화 세팅 등 무엇이든 편하게 물어보세요. 답변은 아래 목록에 달아 드리거나, 연락처를 남기신 경우 개별로 연락드립니다.</p>
+
+        <form class="tk-form" id="tkForm" novalidate>
+          <div class="tk-row">
+            <div class="tk-fld">
+              <label for="tkName">이름 (또는 닉네임)</label>
+              <input id="tkName" type="text" maxlength="30" autocomplete="nickname" placeholder="예: 부평 김중개">
+            </div>
+            <div class="tk-fld">
+              <label for="tkContact">연락처 <span>선택</span></label>
+              <input id="tkContact" type="tel" maxlength="25" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000">
+            </div>
+          </div>
+          <div class="tk-fld">
+            <label for="tkContent">내용</label>
+            <textarea id="tkContent" maxlength="1000" placeholder="궁금한 점을 편하게 적어 주세요."></textarea>
+          </div>
+          <label class="tk-lock" for="tkPrivate">
+            <input type="checkbox" id="tkPrivate" checked>
+            <span>
+              <span class="tk-lock-t">🔒 비공개 댓글로 남기기</span>
+              <span class="tk-lock-d">비공개로 남기면 내용과 연락처가 목록에 나오지 않습니다. 작성자와 운영자만 확인합니다.</span>
+            </span>
+          </label>
+          <button class="btn btn-primary" type="submit" id="tkSubmit">등록하기</button>
+          <p class="tk-note">연락처는 답변을 드리는 용도로만 쓰고, 공개되지 않습니다.</p>
+          <p class="tk-msg" id="tkMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="talk-card reveal">
+        <div class="tk-list-head">
+          <h3>공개 댓글 <span class="tk-count" id="tkCount" hidden>0</span></h3>
+        </div>
+        <p class="tk-sub">🔒 비공개로 남긴 문의는 이 목록에 표시되지 않습니다.</p>
+        <div class="tk-loading" id="tkLoading" aria-hidden="true"><div class="tk-sk"></div><div class="tk-sk"></div></div>
+        <div class="tk-list" id="tkList" aria-live="polite"></div>
+        <div class="tk-empty" id="tkEmpty" hidden>
+          <b>아직 공개된 댓글이 없습니다</b>
+          <span>첫 번째로 궁금한 점을 남겨 주세요. 확인 후 답변을 달아 드립니다.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="site-footer">
@@ -1251,6 +1363,215 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   window.addEventListener('scroll', onScroll, {passive:true});
   window.addEventListener('resize', onScroll);
   onScroll();
+})();
+
+/* 교육 문의 · 댓글 : 구글 폼 접수 → 구글 시트 → 공개 목록 */
+(function(){
+  var form = document.getElementById('tkForm');
+  if(!form) return;
+
+  var FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLScL15TdPBoocZahibdT7W8sVdv5BumjQp9x8pGyKk5HWilX9g/formResponse';
+  var E_NAME = 'entry.261833930';
+  var E_TEL  = 'entry.177818216';
+  var E_TEXT = 'entry.1696956433';
+  var E_TYPE = 'entry.329841729';
+  var FEED = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTBb-rsizcI9vC0RKw7pClSETjJHoUt-9pZDD85tGLtPIEC7gUAKKQBGbEp7HUAH8APpz9V5Y4IQ3wR/pub?gid=0&single=true&output=csv';
+
+  var nameEl = document.getElementById('tkName');
+  var telEl  = document.getElementById('tkContact');
+  var textEl = document.getElementById('tkContent');
+  var privEl = document.getElementById('tkPrivate');
+  var btnEl  = document.getElementById('tkSubmit');
+  var msgEl  = document.getElementById('tkMsg');
+  var listEl = document.getElementById('tkList');
+  var emptyEl= document.getElementById('tkEmpty');
+  var countEl= document.getElementById('tkCount');
+  var loadEl = document.getElementById('tkLoading');
+
+  function say(kind, text){
+    msgEl.className = 'tk-msg ' + kind;
+    msgEl.textContent = text;
+  }
+
+  function parseCsv(text){
+    var rows = [], row = [], cell = '', q = false, i, c;
+    for(i = 0; i < text.length; i++){
+      c = text.charAt(i);
+      if(q){
+        if(c === '"'){ if(text.charAt(i+1) === '"'){ cell += '"'; i++; } else { q = false; } }
+        else { cell += c; }
+      } else if(c === '"'){ q = true; }
+      else if(c === ','){ row.push(cell); cell = ''; }
+      else if(c === '\n'){ row.push(cell); rows.push(row); row = []; cell = ''; }
+      else if(c !== '\r'){ cell += c; }
+    }
+    if(cell !== '' || row.length){ row.push(cell); rows.push(row); }
+    return rows;
+  }
+
+  function fmtDate(s){
+    s = (s || '').replace(/\s+/g, ' ').trim();
+    if(!s) return '';
+    var m = s.match(/^(\d{4})[-.]\s*(\d{1,2})[-.]\s*(\d{1,2})(?:\s*(?:오전|오후)?\s*(\d{1,2}):(\d{2}))?/);
+    if(!m) return s;
+    var out = m[1] + '.' + ('0'+m[2]).slice(-2) + '.' + ('0'+m[3]).slice(-2);
+    if(m[4]) out += ' ' + ('0'+m[4]).slice(-2) + ':' + m[5];
+    return out;
+  }
+
+  function nowLabel(){
+    var d = new Date(), p = function(n){ return ('0'+n).slice(-2); };
+    return d.getFullYear() + '.' + p(d.getMonth()+1) + '.' + p(d.getDate()) + ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
+  }
+
+  function makeItem(o){
+    var it = document.createElement('div');
+    it.className = 'tk-item' + (o.lock ? ' is-lock' : '') + (o.isNew ? ' is-new' : '');
+
+    var meta = document.createElement('div');
+    meta.className = 'tk-meta';
+
+    if(!o.lock){
+      var av = document.createElement('span');
+      av.className = 'tk-avatar';
+      var nm = (o.name || '').trim();
+      av.textContent = nm ? nm.charAt(0) : '·';
+      meta.appendChild(av);
+      var who = document.createElement('span');
+      who.className = 'tk-name';
+      who.textContent = nm || '익명';
+      meta.appendChild(who);
+    }
+
+    var when = document.createElement('span');
+    when.className = 'tk-date';
+    when.textContent = o.date || '';
+    meta.appendChild(when);
+    it.appendChild(meta);
+
+    var body = document.createElement('p');
+    body.className = 'tk-body' + (o.lock ? ' lock' : '');
+    body.textContent = o.text || '';
+    it.appendChild(body);
+
+    if(o.reply){
+      var box = document.createElement('div');
+      box.className = 'tk-reply';
+      var h = document.createElement('b');
+      h.textContent = '운영자 답변';
+      box.appendChild(h);
+      var rp = document.createElement('p');
+      rp.textContent = o.reply;
+      box.appendChild(rp);
+      it.appendChild(box);
+    }
+    return it;
+  }
+
+  function render(items){
+    listEl.textContent = '';
+    loadEl.hidden = true;
+    if(!items.length){
+      emptyEl.hidden = false;
+      countEl.hidden = true;
+      return;
+    }
+    emptyEl.hidden = true;
+    countEl.hidden = false;
+    countEl.textContent = String(items.length);
+    items.forEach(function(o){ listEl.appendChild(makeItem(o)); });
+  }
+
+  function load(){
+    var url = FEED + '&_=' + Date.now();
+    fetch(url, {cache:'no-store'})
+      .then(function(r){
+        if(!r.ok) throw new Error('status ' + r.status);
+        return r.text();
+      })
+      .then(function(t){
+        var rows = parseCsv(t);
+        var items = [];
+        for(var i = 1; i < rows.length; i++){
+          var r = rows[i];
+            var name = (r[1] || '').trim();
+          var body = (r[2] || '').trim();
+          if(!name && !body) continue;
+          items.push({ name:name, text:body, date:fmtDate(r[0]), reply:(r[3] || '').trim() });
+        }
+        render(items);
+      })
+      .catch(function(){
+        loadEl.hidden = true;
+        if(!listEl.childElementCount){
+          emptyEl.hidden = false;
+          emptyEl.querySelector('b').textContent = '댓글 목록을 불러오지 못했습니다';
+          emptyEl.querySelector('span').textContent = '잠시 후 새로고침해 주세요. 새 댓글 등록은 그대로 가능합니다.';
+        }
+      });
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    var name = (nameEl.value || '').trim();
+    var tel  = (telEl.value || '').trim();
+    var text = (textEl.value || '').trim();
+    var isPrivate = !!privEl.checked;
+
+    if(!name){
+      say('err', '이름(또는 닉네임)을 적어 주세요.');
+      nameEl.focus();
+      return;
+    }
+    if(text.length < 2){
+      say('err', '문의하실 내용을 적어 주세요.');
+      textEl.focus();
+      return;
+    }
+
+    btnEl.disabled = true;
+    btnEl.textContent = '등록 중…';
+    msgEl.className = 'tk-msg';
+
+    var body = new URLSearchParams();
+    body.append(E_NAME, name.slice(0,30));
+    body.append(E_TEL, tel.slice(0,25));
+    body.append(E_TEXT, text.slice(0,1000));
+    body.append(E_TYPE, isPrivate ? '비공개 문의' : '공개 댓글');
+    body.append('fvv', '1');
+    body.append('pageHistory', '0');
+    body.append('fbzx', '-1');
+
+    fetch(FORM_ACTION, {
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+      body: body.toString()
+    }).then(function(){
+      btnEl.disabled = false;
+      btnEl.textContent = '등록하기';
+      if(isPrivate){
+        say('ok', '🔒 비공개 문의로 정상적으로 등록되었습니다. 작성자와 운영자만 확인할 수 있습니다.');
+        listEl.insertBefore(makeItem({ lock:true, isNew:true, date:nowLabel(), text:'🔒 비공개 댓글입니다. 작성자와 운영자만 확인할 수 있습니다.' }), listEl.firstChild);
+      } else {
+        say('ok', '정상적으로 등록되었습니다. 공개 댓글로 목록에 표시됩니다.');
+        var it = makeItem({ name:name, text:text, date:nowLabel(), isNew:true });
+        listEl.insertBefore(it, listEl.firstChild);
+        emptyEl.hidden = true;
+        countEl.hidden = false;
+        countEl.textContent = String(listEl.childElementCount);
+      }
+      form.reset();
+      privEl.checked = true;
+    }).catch(function(){
+      btnEl.disabled = false;
+      btnEl.textContent = '등록하기';
+      say('err', '등록하지 못했습니다. 잠시 후 다시 한 번 눌러 주세요.');
+    });
+  });
+
+  load();
 })();
 </script>
 </body>
